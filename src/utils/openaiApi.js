@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const OPENAI_API_KEY = 'YOUR_OPENAI_API_KEY'; // Substitua pela sua chave real da API OpenAI
+const OPENAI_API_KEY = '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'; // Substitua pela sua chave real da API OpenAI
 
 export const generateReleaseNotes = async (input) => {
   try {

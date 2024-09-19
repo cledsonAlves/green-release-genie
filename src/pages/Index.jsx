@@ -23,6 +23,11 @@ const Index = () => {
     setIsLoading(false);
   };
 
+  const handleClear = () => {
+    setInput('');
+    setReleaseNotes('');
+  };
+
   return (
     <div className="min-h-screen bg-green-50 flex flex-col items-center justify-between p-4">
       <Card className="w-full max-w-2xl p-6 bg-white shadow-lg mt-8">
@@ -35,13 +40,22 @@ const Index = () => {
             placeholder="Digite as alterações do lançamento"
             className="w-full p-2 border border-green-300 rounded"
           />
-          <Button 
-            type="submit" 
-            className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
-            disabled={isLoading}
-          >
-            {isLoading ? 'Gerando...' : 'Gerar Notas de Lançamento'}
-          </Button>
+          <div className="flex space-x-2">
+            <Button 
+              type="submit" 
+              className="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+              disabled={isLoading}
+            >
+              {isLoading ? 'Gerando...' : 'Gerar Notas de Lançamento'}
+            </Button>
+            <Button 
+              type="button" 
+              onClick={handleClear}
+              className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
+            >
+              Limpar
+            </Button>
+          </div>
         </form>
         {releaseNotes && (
           <div className="mt-6">

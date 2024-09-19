@@ -31,7 +31,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-green-50 flex flex-col items-center justify-between p-4">
       <Card className="w-full max-w-2xl p-6 bg-white shadow-lg mt-8">
-        <h1 className="text-3xl font-bold mb-6 text-green-700">Gerador de Notas de Lançamento Itaú</h1>
+        <h1 className="text-3xl font-bold mb-6 text-green-700">Gerador de Release Notes (Íon Investimentos)</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <Input
             type="text"

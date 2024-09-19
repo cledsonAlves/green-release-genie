@@ -24,8 +24,8 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-green-50 flex flex-col items-center justify-center p-4">
-      <Card className="w-full max-w-2xl p-6 bg-white shadow-lg">
+    <div className="min-h-screen bg-green-50 flex flex-col items-center justify-between p-4">
+      <Card className="w-full max-w-2xl p-6 bg-white shadow-lg mt-8">
         <h1 className="text-3xl font-bold mb-6 text-green-700">Gerador de Notas de Lançamento Itaú</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <Input
@@ -54,6 +54,9 @@ const Index = () => {
           </div>
         )}
       </Card>
+      <footer className="w-full text-center py-4 bg-green-600 text-white mt-8">
+        <p>Sala de integração 2024</p>
+      </footer>
     </div>
   );
 };

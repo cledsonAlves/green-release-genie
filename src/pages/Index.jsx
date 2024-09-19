@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card } from "@/components/ui/card"
 import { generateReleaseNotes } from '../utils/openaiApi';
+import MonthlyMeasuresGraph from '../components/MonthlyMeasuresGraph';
 
 const Index = () => {
   const [input, setInput] = useState('');
@@ -67,6 +68,7 @@ const Index = () => {
             />
           </div>
         )}
+        <MonthlyMeasuresGraph />
       </Card>
       <footer className="w-full text-center py-4 bg-green-600 text-white mt-8">
         <p>Sala de integração 2024</p>
